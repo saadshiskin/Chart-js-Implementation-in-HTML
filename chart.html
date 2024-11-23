@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chart js Implementation</title>
+  </head>
+  <body>
+    <h2>Chart js Implementation</h2>
+
+    <div style="width: 700px;margin: 0 auto;">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Saad", "ali", "ahmer", "tature", "mamu", "ashi1", "rahat"],
+          datasets: [
+            {
+              label: "Present",
+              data: [12, 19, 3, 15, 2, 3 , 20],
+              borderWidth: 2,
+            },
+            {
+              label: "absent",
+              data: [38, 31, 47, 35, 48, 47 , 30],
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+
+  </body>
+</html>
